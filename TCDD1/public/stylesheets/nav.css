@@ -1,0 +1,256 @@
+
+
+/*
+//  add navbar class to define the basic navbar type
+//  add navbar-fixed-top to fixed nabbar to top
+*/
+
+/*navbar basic define*/
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+
+}
+/*navbar basci deifine for screen 768*/
+@media (min-width: 768px) {
+  .navbar {
+    border-radius: 4px;
+  }
+}
+
+.navbar-fixed-top {
+  padding-right: 0;
+    padding-left: 0;
+    max-height: 340px;
+}
+
+@media (max-width: 480px) and (orientation: landscape) {
+  .navbar-fixed-top{
+    max-height: 200px;
+  }
+}
+
+.navbar-fixed-top{
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  -webkit-transform: translate3d(0, 0, 0);
+       -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+@media (min-width: 768px) {
+  .navbar-fixed-top{
+    border-radius: 0;
+  }
+}
+.navbar-fixed-top {
+  top: -20;
+  border-width: 0 0 1px;
+}
+
+
+/*
+//remove position:fixed in #nav to the navbar-fixed-top
+//remove z-index:1000;
+//remove height: 80px;
+*/
+#nav{
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  background:rgba(255,255,255,0.97);
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(50, 50, 50, 0.4);
+}
+#logo img {
+  /*add new*/
+  position: relative;
+  height: 80px;
+  float: left;
+  top: 20px;
+
+}
+
+/*
+//menu  改的地放在這邊
+*/
+
+.glyphicons_down_arrow
+{ 
+   background:url(glyphicons_212_down_arrow.png) left top; 
+   width:16px; 
+   height:16px;
+
+
+}
+.menu {
+  position:relative;
+  padding-top: 0px;
+  font-size: 14pt;
+  list-style-type:none;
+}
+.menu2{
+  position:relative;
+  padding-top: 0.5px;
+  font-size: 14pt;
+  list-style-type:none;
+}
+@media (min-width: 768px) {
+  .menu {
+  padding-top: 20px;
+  }
+
+}
+
+
+.menu li{
+  display:none;
+  padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .menu li{
+    margin-top: 50px;
+    padding-left: 20px;
+    display: inline;
+    text-align: right;
+
+  }
+}
+.menu2 li{
+
+
+    padding-top: 15px;
+    padding-left: 20px;
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+  .menu2 li{
+  display:none;
+  padding-top: 15px;
+
+  }
+}
+.show{
+  display: block;
+
+  padding-top: 30px;
+  border-left: 30px;
+  border-right: 30px;
+
+
+  font-family: 微軟正黑體, Arial;
+  text-align: center;
+  text-decoration: none;
+  color:#000000;
+  display: inline;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+}
+@media (min-width: 768px) {
+
+  .show{
+     display: none;
+
+  }
+}
+/*
+//css class內容 
+//我習慣是 
+//box相關參數放在最外面 順序是由外而內--www.w3schools.com/css/css_boxmodel.asp
+//font相關參數
+//animate相關參數---記得確認相容性
+*/
+.menu li a {
+  margin: 50px;
+  border-left: 30px;
+  border-right: 30px;
+  font-family: 微軟正黑體, Arial;
+  text-align: center;
+  text-decoration: none;
+  color:#000000;
+
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+
+  /*www.w3schools.com/cssref/css3_pr_transition.asp*/
+}
+
+.menu li a:link, #navlist a:visited
+{
+  color:#000;
+
+}
+
+.menu li a:hover
+{
+   background-color:rgba(14,164,220,.6);
+}
+
+
+.menu2 li a {
+  margin: 50px;
+  border-left: 30px;
+  border-right: 30px;
+  font-family: 微軟正黑體, Arial;
+  text-align: center;
+  text-decoration: none;
+  color:#000000;
+
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  -moz-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+
+  /*www.w3schools.com/cssref/css3_pr_transition.asp*/
+}
+
+.menu2 li a:link, #navlist a:visited
+{
+  color:#000;
+
+
+}
+
+.menu2 li a:hover
+{
+   background-color:rgba(14,164,220,.6);
+}
+
+
+#submenu{
+  height: 20px;
+  top: -50px;
+
+}
+/*
+// your code
+
+#manu {
+  font-size: 14pt;
+  padding-top: 40px;
+}
+#manu a {
+  font-family: 微軟正黑體, Arial;
+  border-left: 30px;
+  border-right: 30px;
+  color: black;
+  -webkit-transition: 
+      background-color 0.5s;
+}
+
+
+#manu a:hover {
+
+    background-color:rgba(50, 50, 50, 0.1);
+
+}
+*/
